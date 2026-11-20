@@ -1,51 +1,551 @@
-doctype html>
-html lang='en'
-head
-meta charset='utf-8'
-meta name='viewport' content='width=device-width,initial-scale=1'
-title
-Ridgehaven Creative
-/style
-body
-font-family:Arial,sans-serif
-background:#f7f7f3
-color:#243e35
-margin:0
-main
-max-width:850px
-margin:9vh auto
-padding:30px
-h1
-font-size:clamp(44px,8vw,80px)
-letter-spacing:-3px
-p
-font-size:20px
-line-height:1.5
-a
-display:inline-block
-background:#243e35
-color:white
-padding:16px 24px
-border-radius:6px
-text-decoration:none
-small
-color:#777
-/head
-body
-main
-strong
-RIDGEHAVEN CREATIVE
-/h1
-Present your best.
-Without the agency hassle.
-p
-Premium presentations, proposals, pitch decks, and business documents. A simple design subscription for growing companies.
-p
-Founding plan: $995/month. Unlimited queued requests, one active request at a time. Enrollment opening soon.
-a href='mailto:hello@ridgehavencreative.com?subject=Founding%20Client%20Inquiry'
-Request founding access
-small
-Preview only. Checkout is not active. Email address pending activation.
-/main
-/body
-/html
+    &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+    &lt;title&gt;Ridgehaven Creative — Premium Presentation Design Service&lt;/title&gt;
+    &lt;meta name="description" content="Ridgehaven Creative delivers professional pitch decks, proposals, capability statements and sales presentations. Founding access at $995/month with unlimited queued requests. Preview site — subscriptions not yet accepting payment."&gt;
+    &lt;meta name="robots" content="index,follow"&gt;
+    &lt;meta property="og:title" content="Ridgehaven Creative — Premium Presentation Design Service"&gt;
+    &lt;meta property="og:description" content="Professional pitch decks, proposals, capability statements and sales presentations. Founding access opening soon at $995/month."&gt;
+    &lt;style&gt;
+        :root {
+            --ivory: #F7F5EF;
+            --forest: #163D34;
+            --gold: #BDA36B;
+            --forest-light: #2A5A50;
+            --white: #FFFFFF;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--ivory);
+            color: var(--forest);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* Header */
+        .site-header {
+            background: var(--forest);
+            padding: 20px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.4rem;
+            color: var(--ivory);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+        }
+        .logo span {
+            color: var(--gold);
+        }
+        .header-tagline {
+            color: rgba(247,245,239,0.6);
+            font-size: 0.85rem;
+        }
+        /* Hero */
+        .hero {
+            background: var(--forest);
+            color: var(--ivory);
+            padding: 100px 0 110px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            color: var(--ivory);
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(247,245,239,0.8);
+            max-width: 620px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--forest);
+            padding: 16px 36px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            transition: background 0.2s, transform 0.15s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #c9b37a;
+            transform: translateY(-1px);
+        }
+        .preview-banner {
+            margin-top: 18px;
+            font-size: 0.88rem;
+            color: rgba(247,245,239,0.5);
+        }
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        section.alt-bg {
+            background: var(--white);
+        }
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            color: var(--forest);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: rgba(22,61,52,0.65);
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 1.05rem;
+        }
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+        .service-card {
+            background: var(--white);
+            border: 1px solid rgba(22,61,52,0.1);
+            border-radius: 10px;
+            padding: 36px 28px;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .service-card:hover {
+            box-shadow: 0 8px 30px rgba(22,61,52,0.08);
+        }
+        .service-card.alt-bg {
+            background: var(--ivory);
+            border: none;
+        }
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--forest);
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            color: rgba(22,61,52,0.7);
+            line-height: 1.6;
+        }
+        /* How it works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            counter-reset: step;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--forest);
+            color: var(--gold);
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+        .step h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--forest);
+        }
+        .step p {
+            font-size: 0.93rem;
+            color: rgba(22,61,52,0.65);
+        }
+        /* Founding Offer */
+        .offer-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--forest);
+            color: var(--ivory);
+            border-radius: 14px;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .offer-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+        }
+        .offer-price {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .offer-price span {
+            font-size: 1rem;
+            color: rgba(247,245,239,0.6);
+        }
+        .offer-label {
+            font-size: 0.9rem;
+            color: rgba(247,245,239,0.5);
+            margin-bottom: 30px;
+        }
+        .offer-features {
+            list-style: none;
+            text-align: left;
+            max-width: 440px;
+            margin: 0 auto 30px;
+        }
+        .offer-features li {
+            padding: 8px 0;
+            font-size: 0.98rem;
+            color: rgba(247,245,239,0.85);
+            border-bottom: 1px solid rgba(247,245,239,0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .offer-features li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .offer-note {
+            font-size: 0.82rem;
+            color: rgba(247,245,239,0.45);
+            margin-top: 16px;
+            font-style: italic;
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        /* Scope Exclusions */
+        .exclusions {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .exclusions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+        }
+        .exclusion-item {
+            background: var(--white);
+            border: 1px solid rgba(22,61,52,0.1);
+            border-radius: 8px;
+            padding: 16px 18px;
+            text-align: center;
+            font-size: 0.93rem;
+            color: rgba(22,61,52,0.7);
+        }
+        .exclusion-item .excl-icon {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            color: var(--gold);
+        }
+        /* FAQ */
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(22,61,52,0.1);
+            padding: 22px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.1rem;
+            color: var(--forest);
+            margin-bottom: 8px;
+            cursor: default;
+        }
+        .faq-answer {
+            font-size: 0.95rem;
+            color: rgba(22,61,52,0.65);
+            line-height: 1.65;
+        }
+        /* Footer */
+        .site-footer {
+            background: var(--forest);
+            color: rgba(247,245,239,0.6);
+            padding: 48px 0 40px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .site-footer .footer-brand {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.3rem;
+            color: var(--ivory);
+            margin-bottom: 12px;
+        }
+        .site-footer .footer-tagline {
+            margin-bottom: 8px;
+            color: rgba(247,245,239,0.5);
+        }
+        .site-footer .footer-status {
+            margin-top: 18px;
+            font-size: 0.82rem;
+            color: rgba(247,245,239,0.35);
+        }
+        .site-footer .footer-status .inquiries {
+            color: var(--gold);
+            opacity: 0.7;
+        }
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 60px 0 70px;
+            }
+            section {
+                padding: 55px 0;
+            }
+            .offer-box {
+                padding: 36px 24px;
+            }
+            .offer-price {
+                font-size: 2.2rem;
+            }
+            .container {
+                padding: 0 18px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="site-header" role="banner"&gt;
+        &lt;div class="container"&gt;
+            &lt;a href="#top" class="logo"&gt;Ridgehaven &lt;span&gt;Creative&lt;/span&gt;&lt;/a&gt;
+            &lt;span class="header-tagline"&gt;Premium Presentation Design&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main id="top"&gt;
+        &lt;!-- Hero --&gt;
+        &lt;section class="hero" role="banner"&gt;
+            &lt;div class="container"&gt;
+                &lt;h1&gt;Make every business presentation your strongest.&lt;/h1&gt;
+                &lt;p&gt;Professional pitch decks, proposals, capability statements and sales presentations — designed to move deals forward.&lt;/p&gt;
+                &lt;a href="#offer" class="btn-primary"&gt;Founding access opening soon&lt;/a&gt;
+                &lt;p class="preview-banner"&gt;Preview site — subscriptions not yet accepting payment.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Services --&gt;
+        &lt;section id="services"&gt;
+            &lt;div class="container"&gt;
+                &lt;h2 class="section-title"&gt;What we design&lt;/h2&gt;
+                &lt;p class="section-subtitle"&gt;Focused creative output for business communication.&lt;/p&gt;
+                &lt;div class="services-grid"&gt;
+                    &lt;div class="service-card"&gt;
+                        &lt;span class="service-icon" aria-hidden="true"&gt;📊&lt;/span&gt;
+                        &lt;h3&gt;Pitch Decks&lt;/h3&gt;
+                        &lt;p&gt;Investor-ready decks that tell your story clearly and convert.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="service-card"&gt;
+                        &lt;span class="service-icon" aria-hidden="true"&gt;📝&lt;/span&gt;
+                        &lt;h3&gt;Proposals&lt;/h3&gt;
+                        &lt;p&gt;Polished, branded proposals that win more RFPs and bids.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="service-card"&gt;
+                        &lt;span class="service-icon" aria-hidden="true"&gt;📋&lt;/span&gt;
+                        &lt;h3&gt;Capability Statements&lt;/h3&gt;
+                        &lt;p&gt;Standout capability statements that showcase your strengths.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="service-card"&gt;
+                        &lt;span class="service-icon" aria-hidden="true"&gt;📈&lt;/span&gt;
+                        &lt;h3&gt;Sales Presentations&lt;/h3&gt;
+                        &lt;p&gt;Compelling sales decks built to engage and close.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- How It Works --&gt;
+        &lt;section class="alt-bg" id="how-it-works"&gt;
+            &lt;div class="container"&gt;
+                &lt;h2 class="section-title"&gt;How it works&lt;/h2&gt;
+                &lt;p class="section-subtitle"&gt;A simple workflow so you can focus on your business.&lt;/p&gt;
+                &lt;div class="steps"&gt;
+                    &lt;div class="step"&gt;
+                        &lt;span class="step-number"&gt;1&lt;/span&gt;
+                        &lt;h3&gt;Submit your request&lt;/h3&gt;
+                        &lt;p&gt;Tell us about your project — format, content, and timeline needs.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="step"&gt;
+                        &lt;span class="step-number"&gt;2&lt;/span&gt;
+                        &lt;h3&gt;One active request at a time&lt;/h3&gt;
+                        &lt;p&gt;We stay focused on your project so you get quality, not delays.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="step"&gt;
+                        &lt;span class="step-number"&gt;3&lt;/span&gt;
+                        &lt;h3&gt;Review, refine, and approve&lt;/h3&gt;
+                        &lt;p&gt;Request in-scope revisions until it's exactly what you need.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Founding Offer --&gt;
+        &lt;section id="offer"&gt;
+            &lt;div class="container"&gt;
+                &lt;h2 class="section-title"&gt;Founding offer&lt;/h2&gt;
+                &lt;p class="section-subtitle"&gt;A fair, transparent pricing model for ongoing presentation needs.&lt;/p&gt;
+                &lt;div class="offer-box"&gt;
+                    &lt;div class="offer-price"&gt;$995 / month&lt;/div&gt;
+                    &lt;div class="offer-label"&gt;Founding tier — limited availability&lt;/div&gt;
+                    &lt;ul class="offer-features"&gt;
+                        &lt;li&gt;Unlimited queued requests — submit as many as you need&lt;/li&gt;
+                        &lt;li&gt;One active at a time — focused, quality output&lt;/li&gt;
+                        &lt;li&gt;Typical two business day target for standard-size requests&lt;/li&gt;
+                        &lt;li&gt;In-scope revisions included — no per-revision fees&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;p class="offer-note"&gt;Timeline is a target, not a guarantee. Rush, express, and complex research requests are outside scope.&lt;/p&gt;
+                    &lt;div class="cta-section"&gt;
+                        &lt;a href="#footer" class="btn-primary"&gt;Founding access opening soon&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Scope Exclusions --&gt;
+        &lt;section class="alt-bg" id="exclusions"&gt;
+            &lt;div class="container"&gt;
+                &lt;h2 class="section-title"&gt;What's not included&lt;/h2&gt;
+                &lt;p class="section-subtitle"&gt;Our service is focused on presentation design. These areas are outside our scope:&lt;/p&gt;
+                &lt;div class="exclusions"&gt;
+                    &lt;div class="exclusions-grid"&gt;
+                        &lt;div class="exclusion-item"&gt;
+                            &lt;span class="excl-icon" aria-hidden="true"&gt;✕&lt;/span&gt;
+                            Print design
+                        &lt;/div&gt;
+                        &lt;div class="exclusion-item"&gt;
+                            &lt;span class="excl-icon" aria-hidden="true"&gt;✕&lt;/span&gt;
+                            Web / development
+                        &lt;/div&gt;
+                        &lt;div class="exclusion-item"&gt;
+                            &lt;span class="excl-icon" aria-hidden="true"&gt;✕&lt;/span&gt;
+                            Video editing
+                        &lt;/div&gt;
+                        &lt;div class="exclusion-item"&gt;
+                            &lt;span class="excl-icon" aria-hidden="true"&gt;✕&lt;/span&gt;
+                            Complex research
+                        &lt;/div&gt;
+                        &lt;div class="exclusion-item"&gt;
+                            &lt;span class="excl-icon" aria-hidden="true"&gt;✕&lt;/span&gt;
+                            Rush / express jobs
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!-- FAQ --&gt;
+        &lt;section id="faq"&gt;
+            &lt;div class="container"&gt;
+                &lt;h2 class="section-title"&gt;Frequently asked questions&lt;/h2&gt;
+                &lt;p class="section-subtitle"&gt;Common questions about the founding offer.&lt;/p&gt;
+                &lt;div class="faq-list"&gt;
+                    &lt;div class="faq-item"&gt;
+                        &lt;h3 class="faq-question"&gt;What does "unlimited queued requests" mean?&lt;/h3&gt;
+                        &lt;p class="faq-answer"&gt;You can submit as many design requests as you'd like. We work on one at a time, so we maintain a high quality of output. You can queue up new requests while one is in progress.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="faq-item"&gt;
+                        &lt;h3 class="faq-question"&gt;Are revisions included?&lt;/h3&gt;
+                        &lt;p class="faq-answer"&gt;Yes. In-scope revisions are included at no additional cost. You can request changes to your active project until you're satisfied.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="faq-item"&gt;
+                        &lt;h3 class="faq-question"&gt;Is the two business day target a guarantee?&lt;/h3&gt;
+                        &lt;p class="faq-answer"&gt;No. The two business day target applies to standard-size requests. Complex or large projects may take longer. We'll communicate realistic timelines upfront.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="faq-item"&gt;
+                        &lt;h3 class="faq-question"&gt;Can I cancel my subscription?&lt;/h3&gt;
+                        &lt;p class="faq-answer"&gt;You can cancel at any time. Cancellation takes effect at the end of your current billing period. Any active requests in progress will be completed.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="faq-item"&gt;
+                        &lt;h3 class="faq-question"&gt;What file formats do you deliver?&lt;/h3&gt;
+                        &lt;p class="faq-answer"&gt;We typically deliver in editable format (e.g., PowerPoint, Google Slides) along with a PDF export. Specific formats depend on the project requirements.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer class="site-footer" id="footer" role="contentinfo"&gt;
+        &lt;div class="container"&gt;
+            &lt;p class="footer-brand"&gt;Ridgehaven Creative&lt;/p&gt;
+            &lt;p class="footer-tagline"&gt;Premium presentation design service for forward-thinking businesses.&lt;/p&gt;
+            &lt;p class="footer-status"&gt;
+                Preview site — subscriptions not yet accepting payment.
+            &lt;/p&gt;
+            &lt;p class="footer-status"&gt;
+                &lt;span class="inquiries"&gt;Inquiries opening soon.&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p class="footer-status" style="margin-top:20px; font-size:0.78rem;"&gt;
+                © 2026 Ridgehaven Creative. All rights reserved.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
